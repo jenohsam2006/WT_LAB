@@ -8,7 +8,6 @@
 </head>
 
 <body bgcolor="#E8F4FD" text="black" link="blue" alink="red" vlink="purple">
-
 <table width="100%" bgcolor="#003366" cellpadding="15">
 <tr>
 <td align="center">
@@ -17,7 +16,7 @@
 </font>
 <br><br>
 <font color="white" size="5">
-HTML5 Form and Media Elements
+HTML5 Form and Media Elements URK24CS1154
 </font>
 </td>
 </tr>
@@ -95,62 +94,10 @@ Upload Photo<br>
 <input type="submit" value="Register">
 &nbsp;&nbsp;
 <input type="reset" value="Reset">
-
 </form>
-
-</fieldset>
-
-</td>
-
-<td width="60%" valign="top">
-<fieldset>
-<legend>
-<font color="darkblue">
-<b>Video</b>
-</font>
-</legend>
-<video width="800" height="350" controls>
-<source src="sample.mp4" type="video/mp4">
-</video>
 </fieldset>
 <br>
-<fieldset>
-<legend>
-<font color="darkblue">
-<b>Audio</b>
-</font>
-</legend>
-<audio controls>
-<source src="sample.mp3" type="audio/mpeg">
-</audio>
-</fieldset>
-<br>
-<fieldset>
-<legend>
-<font color="darkblue">
-<b>PDF Document</b>
-</font>
-</legend>
-<embed src="sample.pdf" width="500" height="250">
-</fieldset>
-<br>
-<fieldset>
-<legend>
-<font color="darkblue">
-<b>Location</b>
-</font>
-</legend>
-<iframe
-src="https://www.google.com/maps?q=Karunya%20Institute%20of%20Technology%20and%20Sciences&output=embed"
-width="800"
-height="300">
-</iframe>
-</fieldset>
-</td>
-</tr>
-</table>
-<br>
-<table border="1" width="40%" cellpadding="8" bgcolor="white">
+<table border="1" width="80%" cellpadding="8" bgcolor="white">
 <tr bgcolor="#003366">
 <th><font color="white">Skill</font></th>
 <th><font color="white">Level</font></th>
@@ -177,6 +124,54 @@ height="300">
 <td>Python</td>
 <td>
     <progress value="90" max="100"></progress>
+</td>
+</tr>
+</table>
+</td>
+<td width="60%" valign="top">
+<fieldset>
+<legend>
+<font color="darkblue">
+<b>Video</b>
+</font>
+</legend>
+<video width="800" height="350" controls>
+<source src="C:\Users\Jenoh Sam\OneDrive\Desktop\WT LAB\nature video.mp4" type="video/mp4">
+</video>
+</fieldset>
+<br>
+<fieldset>
+<legend>
+<font color="darkblue">
+<b>Audio</b>
+</font>
+</legend>
+<audio controls>
+<source src="C:\Users\Jenoh Sam\OneDrive\Desktop\WT LAB\nature audio.mp3" type="audio/mpeg">
+</audio>
+</fieldset>
+<br>
+<fieldset>
+<legend>
+<font color="darkblue">
+<b>PDF Document</b>
+</font>
+</legend>
+<embed src="C:\Users\Jenoh Sam\OneDrive\Desktop\WT LAB\resume.jpeg" width="500" height="250">
+</fieldset>
+<br>
+<fieldset>
+<legend>
+<font color="darkblue">
+<b>Location</b>
+</font>
+</legend>
+<iframe
+src="https://www.google.com/maps?q=Karunya%20Institute%20of%20Technology%20and%20Sciences&output=embed"
+width="800"
+height="300">
+</iframe>
+</fieldset>
 </td>
 </tr>
 </table>
