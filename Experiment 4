@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel World - URK24CS1154 </title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Trebuchet MS",Verdana,sans-serif;
+}
+body{
+    background:#F4F9F9;
+    color:#333;
+}
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 60px;
+    background:linear-gradient(to right,#0A4D68,#088395);
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+.logo{
+    font-size:34px;
+    color:white;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+nav a{
+    text-decoration:none;
+    color:white;
+    padding:10px 18px;
+    margin-left:10px;
+    border-radius:30px;
+    transition:.4s;
+    font-size:18px;
+}
+nav a:hover{
+    background:white;
+    color:#0A4D68;
+}
+.hero{
+    height:550px;
+    background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("travel.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+}
+.hero h1{
+    font-size:65px;
+    text-shadow:4px 4px 8px black;
+    letter-spacing:2px;
+}
+.hero p{
+    font-size:24px;
+    margin:20px;
+}
+.hero button{
+    padding:12px 30px;
+    margin:10px;
+    border:none;
+    border-radius:40px;
+    background:#FFB703;
+    color:#222;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.4s;
+}
+.hero button:hover{
+    background:#FB8500;
+    color:white;
+}
+.box,.offer,form{
+    width:90%;
+    margin:30px auto;
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+.box h2,.offer h2,form h2{
+    color:#003049;
+    margin-bottom:15px;
+}
+.gallery{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin:40px;
+}
+.gallery img{
+    width:300px;
+    height:200px;
+    border-radius:20px;
+    opacity:.85;
+    transition:.5s;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+.gallery img:hover{
+    transform:scale(1.08);
+    opacity:1;
+}
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #bbb;
+    border-radius:10px;
+}
+input:focus{
+    border:3px solid #088395;
+    background:#E8FDFF;
+}
+input:required{
+    background:#FFFBEA;
+}
+input[type=email]:valid{
+    color:green;
+}
+input[type=email]:invalid{
+    color:red;
+}
+input[type=submit]{
+    background:#088395;
+    color:white;
+    border:none;
+    font-size:18px;
+    cursor:pointer;
+}
+input[type=submit]:hover{
+    background:#05BFDB;
+}
+table{
+    width:90%;
+    margin:30px auto;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+th{
+    background:#0A4D68;
+    color:white;
+}
+th,td{
+    padding:15px;
+    border:1px solid #ddd;
+}
+tr:nth-child(odd){
+    background:#F8FCFF;
+}
+tr:nth-child(even){
+    background:#E3F4F4;
+}
+tr:hover{
+    background:#FFE8A3;
+}
+footer{
+    background:#002B5B;
+    color:white;
+    text-align:center;
+    padding:25px;
+    font-size:18px;
+    margin-top:30px;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">🌍 Travel World</div>
+<nav>
+<a href="#">Home</a>
+<a href="#">Destinations</a>
+<a href="#">Gallery</a>
+<a href="#">Booking</a>
+<a href="#">Contact</a>
+</nav>
+</header>
+<section class="hero">
+<h1>Explore The World</h1>
+<p>Discover Beautiful Places Around The Globe</p>
+<button>Book Now</button>
+<button>Explore</button>
+</section>
+<div class="box">
+<h2>Welcome to Travel World</h2>
+<p>
+Travel World helps you discover amazing beaches, mountains,
+historical places and exciting adventures across the world.
+Plan your dream vacation with us.
+</p>
+</div>
+<div class="offer">
+<h2>Special Holiday Offers</h2>
+<p>Get up to 30% discount on your next trip.</p>
+</div>
+<div class="gallery">
+<img src="kerala.jpg">
+<img src="simala.jpg">
+<img src="maldives.jpg">
+</div>
+<form>
+<h2>Book Your Trip</h2>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Email Address" required>
+<input type="text" placeholder="Destination" required>
+<input type="date" required>
+<input type="submit" value="Book Now">
+</form>
+<table>
+<tr>
+<th>Destination</th>
+<th>Days</th>
+<th>Price</th>
+</tr>
+<tr>
+<td>Kerala</td>
+<td>5</td>
+<td>6000</td>
+</tr>
+<tr>
+<td>Simala</td>
+<td>6</td>
+<td>15000</td>
+</tr>
+<tr>
+<td>Maldives</td>
+<td>8</td>
+<td>30000</td>
+</tr>
+</table>
+<footer>
+<h3>Travel World © 2026 | Your Journey Begins Here</h3>
+<h4>Web Technology Lab | URK24CS1154 </h4>
+</footer>
+</body>
+</html>
