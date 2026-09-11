@@ -1,0 +1,277 @@
+#1
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Calculator URK24CS1154</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<style>
+    body{font-family:Arial;text-align:center;background:#f2f2f2}
+    .calculator{width:350px;margin:50px auto;background:white;padding:25px;border-radius:10px}
+    input{width:85%;padding:10px;margin:10px}
+    button{padding:10px 15px;margin:5px;background:#1683e8;color:white;border:0;border-radius:5px;cursor:pointer}
+    #result{font-size:20px;font-weight:bold;margin-top:20px}
+</style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Calculator URK24CS1154</h2>
+        <input type="number" id="num1" placeholder="Enter first number">
+        <input type="number" id="num2" placeholder="Enter second number">
+        <br>
+        <button id="add">Addition</button>
+        <button id="sub">Subtraction</button>
+        <button id="mul">Multiplication</button>
+        <button id="div">Division</button>
+        <div id="result">Result: </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            function getNumbers(){
+            let a=parseFloat($("#num1").val());
+            let b=parseFloat($("#num2").val());
+            return [a,b];
+            }
+        $("#add").click(function(){
+            let n=getNumbers();
+            if(isNaN(n[0])||isNaN(n[1])){$("#result").text("Enter both numbers");return;}
+            $("#result").text("Result: "+(n[0]+n[1]));
+        });
+        $("#sub").click(function(){
+            let n=getNumbers();
+            if(isNaN(n[0])||isNaN(n[1])){$("#result").text("Enter both numbers");return;}
+            $("#result").text("Result: "+(n[0]-n[1]));
+        });
+        $("#mul").click(function(){
+            let n=getNumbers();
+            if(isNaN(n[0])||isNaN(n[1])){$("#result").text("Enter both numbers");return;}
+            $("#result").text("Result: "+(n[0]*n[1]));
+        });
+        $("#div").click(function(){
+            let n=getNumbers();
+            if(isNaN(n[0])||isNaN(n[1])){$("#result").text("Enter both numbers");return;}
+            if(n[1]==0){$("#result").text("Cannot divide by zero");return;}
+            $("#result").text("Result: "+(n[0]/n[1]));
+        });
+    });
+</script>
+</body>
+</html>
+
+
+#2
+<!DOCTYPE html>
+<html>
+<head><title>Budget Calculator URK24CS1154</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<style>
+body{font-family:Arial;text-align:center;background:#f2f2f2}
+.container{width:500px;margin:50px auto;background:white;padding:25px;border-radius:10px}
+input{width:80px;padding:8px;margin:5px}
+button{padding:10px 20px;background:#1683e8;color:white;border:0;border-radius:5px;cursor:pointer}
+.result{margin-top:20px;font-size:18px;font-weight:bold}
+</style></head>
+<body>
+<div class="container">
+<h2>Budget Calculator URK24CS1154</h2>
+<input type="number" id="amount" placeholder="Amount"><br>
+Room Rent (%) <input type="number" id="rent" value="50">
+Accessories (%) <input type="number" id="accessories" value="20">
+Emergency (%) <input type="number" id="emergency" value="20">
+Saving (%) <input type="number" id="saving" value="10">
+<br><br>
+<button id="calculate">Calculate</button>
+<div class="result" id="result"></div></div>
+<script>
+$(document).ready(function(){
+$("#calculate").click(function(){
+let amount=parseFloat($("#amount").val());
+let rent=parseFloat($("#rent").val());
+let accessories=parseFloat($("#accessories").val());
+let emergency=parseFloat($("#emergency").val());
+let saving=parseFloat($("#saving").val());
+if(isNaN(amount)||amount<=0){
+$("#result").text("Enter a valid amount");
+return;
+}
+if(rent+accessories+emergency+saving!=100){
+$("#result").text("Percentages must total 100%");
+return;
+}
+$("#result").html("Room Rent: Rs."+amount*rent/100+"<br>Accessories: Rs."+amount*accessories/100+"<br>Emergency: Rs."+amount*emergency/100+"<br>Saving: Rs."+amount*saving/100);
+});
+});
+</script>
+</body>
+</html>
+
+
+
+#3
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cake Order Calculator URK24CS1154</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<style>
+body{font-family:Arial;text-align:center;background:#f5f5f5}
+.container{width:500px;margin:40px auto;background:white;padding:25px;border-radius:10px}
+input{width:100px;padding:8px;margin:8px}
+button{padding:10px 30px;background:#d00000;color:white;border:0;border-radius:5px;cursor:pointer}
+#result{margin-top:20px;font-size:20px;font-weight:bold}
+</style>
+</head>
+<body>
+<div class="container">
+<h2>CAKE SHOP URK24CS1154</h2>
+<p>Color Cake - Rs.300</p>
+<input type="number" id="color" value="0" min="0">
+<p>Brown Cake - Rs.200</p>
+<input type="number" id="brown" value="0" min="0">
+<p>Milky Cake - Rs.250</p>
+<input type="number" id="milky" value="0" min="0">
+<p>Black Forest Cake - Rs.350</p>
+<input type="number" id="black" value="0" min="0">
+<br><br>
+<button id="order">Place Order</button>
+<div id="result">Total Price: Rs.0</div>
+</div>
+<script>
+$(document).ready(function(){
+$("#order").click(function(){
+let color=parseInt($("#color").val())||0;
+let brown=parseInt($("#brown").val())||0;
+let milky=parseInt($("#milky").val())||0;
+let black=parseInt($("#black").val())||0;
+let total=color*300+brown*200+milky*250+black*350;
+$("#result").text("Total Price: Rs."+total);
+});
+});
+</script>
+</body>
+</html>
+
+
+
+#4
+<!DOCTYPE html>
+<html>
+<head><title>Car Body Workshop URK24CS1154</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<style>
+    body{font-family:Arial;text-align:center;background:#f2f2f2}
+    .car{width:350px;height:200px;margin:30px auto;position:relative}
+    .body{width:280px;height:80px;background:green;position:absolute;left:35px;top:70px;border-radius:20px}
+    .roof{width:140px;height:60px;background:skyblue;position:absolute;left:105px;top:20px;border-radius:60px 60px 0 0}
+    .wheel{width:50px;height:50px;background:black;border-radius:50%;position:absolute;top:130px}
+    .wheel1{left:65px}
+    .wheel2{right:65px}
+    button{padding:10px;margin:5px;background:#1683e8;color:white;border:0;border-radius:5px;cursor:pointer}
+</style>
+</head>
+<body>
+    <h2>Car Body Workshop URK24CS1154</h2>
+    <div class="car">
+    <div class="roof"></div>
+    <div class="body"></div>
+    <div class="wheel wheel1"></div>
+    <div class="wheel wheel2"></div></div>
+    <button id="red">Red Car</button>
+    <button id="blue">Blue Car</button>
+    <button id="green">Green Car</button>
+    <button id="darkGlass">Dark Glass</button>
+    <button id="tyre">Increase Tyre</button>
+    <button id="reset">Reset</button>
+<script>
+    $(document).ready(function(){
+    $("#red").click(function(){$(".body").css("background","red")});
+    $("#blue").click(function(){$(".body").css("background","blue")});
+    $("#green").click(function(){$(".body").css("background","green")});
+    $("#darkGlass").click(function(){$(".roof").css("background","black")});
+    $("#tyre").click(function(){$(".wheel").css({"width":"70px","height":"70px"})});
+    $("#reset").click(function(){
+    $(".body").css("background","green");
+    $(".roof").css("background","skyblue");
+    $(".wheel").css({"width":"50px","height":"50px"});
+});
+});
+</script>
+</body>
+</html>
+
+
+
+#5
+<!DOCTYPE html>
+<html>
+<head><title>Product Card - jQuery Effects URK24CS1154</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<style>
+    body{font-family:Arial;text-align:center;background:#f2f2f2}
+    .container{width:500px;margin:40px auto}
+    #product{background:white;padding:25px;border:2px solid #333;border-radius:10px}
+    button{padding:10px 15px;margin:5px;border:0;background:#1683e8;color:white;border-radius:5px}
+    #message{font-weight:bold;margin:20px}
+</style>
+</head><body>
+    <div class="container">
+    <h2>Product Details URK24CS1154</h2>
+    <div id="product">
+    <h2>Laptop Pro</h2>
+    <p><b>Price:</b> ₹65,000</p>
+    <p><b>Category:</b> Electronics</p>
+    <p><b>Stock Status:</b> Available</p>
+    <p><b>Description:</b> High-performance laptop for students and professionals.</p>
+    </div><br>
+    <button id="show">Show</button>
+    <button id="hide">Hide</button>
+    <button id="fade">Fade</button>
+    <button id="slide">Slide</button>
+    <button id="animate">Animate</button>
+    <button id="stop">Stop Animation</button>
+    <button id="callback">Callback</button>
+    <button id="chain">Chaining</button>
+    <button id="reset">Reset</button>
+    <div id="message"></div></div>
+<script>
+$(document).ready(function(){
+$("#show").click(function(){
+$("#product").show();
+});
+$("#hide").click(function(){
+$("#product").hide();
+});
+$("#fade").click(function(){
+$("#product").fadeToggle(1000);
+});
+$("#slide").click(function(){
+$("#product").slideToggle(1000);
+});
+$("#animate").click(function(){
+$("#product").animate({width:"300px",marginLeft:"100px",fontSize:"18px"},2000);
+});
+$("#stop").click(function(){
+$("#product").stop();
+});
+$("#callback").click(function(){
+$("#product").fadeOut(1000,function(){
+$("#message").text("Animation completed successfully");
+$("#product").fadeIn(1000);
+});
+});
+$("#chain").click(function(){
+$("#product").slideUp(500).slideDown(500).fadeOut(500).fadeIn(500);
+});
+$("#reset").click(function(){
+$("#product").stop(true,true).show().css({
+width:"",
+marginLeft:"",
+fontSize:""
+});
+$("#message").text("");
+});
+});
+</script>
+</body>
+</html>
+
+
